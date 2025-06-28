@@ -81,81 +81,102 @@ const Card = ({ product, isEdit, isDelete,updateProducts }) => {
 
 const StyledCard = styled.div`
   position: relative;
-  width: 300px;
-  border-radius: 10px;
+  width: 320px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: var(--secondary-color);
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  margin: 20px auto;
-  border: 1px solid black;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 25px auto;
+  border: none;
+  color: #f0f0f0;
+
   .category {
-    background-color: #272727;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    border-radius: 0 10px 0 10px;
-    font-size: 14px;
+    top: 10px;
+    right: 10px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
+
   .cover {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    padding: 10px;
-    background-color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   }
+
   .title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 15px 0;
-    color: var(--font-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 20px 20px 10px 20px;
+    color: #fff;
   }
+
   .desc {
     font-size: 1rem;
-    color: var(--font-color);
-    opacity: 0.8;
-    margin: 10px 20px;
+    color: #e0e0e0;
+    margin: 0 20px 15px 20px;
+    line-height: 1.4;
+    min-height: 60px;
   }
+
   .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--font-color);
-    margin: 10px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffd700;
+    margin: 0 20px 20px 20px;
   }
+
   .buttons {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 0 20px 20px 20px;
   }
+
   .primary.btn {
-    background-color: var(--primary-color);
-    color: var(--font-color);
-    border: 1px solid black;
-    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
     font-size: 1rem;
-    border-radius: 5px;
+    font-weight: 600;
+    border-radius: 30px;
     cursor: pointer;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 111, 97, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
     &:hover {
-      background-color: #06c44c;
+      background-color: #ff3b2e;
+      box-shadow: 0 6px 12px rgba(255, 59, 46, 0.7);
     }
   }
+
   .primary.btn.del {
-    background-color: #fc3b3b;
-    color: var(--background-color);
-    border: 1px solid black;
-    padding: 10px 20px;
+    background-color: #444;
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+    padding: 12px 25px;
     font-size: 1rem;
-    border-radius: 5px;
+    font-weight: 600;
+    border-radius: 30px;
     cursor: pointer;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
+    box-shadow: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
     &:hover {
-      background-color: #bf3535;
+      background-color: #ff6f61;
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 8px rgba(255, 111, 97, 0.5);
     }
   }
 `;
