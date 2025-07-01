@@ -7,7 +7,7 @@ const CartCard = ({ product, updateCart }) => {
   console.log(product._id)
   const updateQuantity = async () => {
     try {
-     let res = await axios.post('http://localhost:3000/api/cart/update', {
+     let res = await axios.post('https://ecom-web-jnzv.onrender.com/api/cart/update', {
       productId: product._id,
       quantity: Number(quantity)
     }, {
@@ -48,7 +48,7 @@ const CartCard = ({ product, updateCart }) => {
 
   const handleDeleteItem = async (id) => {
     try {
-      let res = await axios.delete(`http://localhost:3000/api/cart/delete/${id}`, {
+      let res = await axios.delete(`https://ecom-web-jnzv.onrender.com/api/cart/delete/${id}`, {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token")
         }
@@ -66,7 +66,7 @@ const CartCard = ({ product, updateCart }) => {
   return (
     <CardContainer>
       <ImageContainer>
-        <img src={`http://localhost:3000/uploads/${product.imageUrl}`} alt={product.name} />
+        <img src={`https://ecom-web-jnzv.onrender.com/uploads/${product.imageUrl}`} alt={product.name} />
       </ImageContainer>
       <DetailsContainer>
         <ProductName>{product.name}</ProductName>

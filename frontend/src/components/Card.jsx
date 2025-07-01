@@ -13,10 +13,10 @@ const Card = ({ product, isEdit, isDelete,updateProducts }) => {
 
   const handleDelete = async () => {
     try {
-      let res = await axios.delete(`http://localhost:3000/api/products/${product._id}`, {
+      let res = await axios.delete(`https://ecom-web-jnzv.onrender.com/api/products/${product._id}`, {
         headers: { Authorization: "Bearer " + token }
       });
-      let res2 = await axios.delete(`http://localhost:3000/api/cart/delete/${product._id}`, {
+      let res2 = await axios.delete(`https://ecom-web-jnzv.onrender.com/api/cart/delete/${product._id}`, {
         headers: { Authorization: "Bearer " + token }
       });
       console.log("Response 1", res.data.message)
@@ -41,7 +41,7 @@ const Card = ({ product, isEdit, isDelete,updateProducts }) => {
   const handleCart = async (e) => {
     e.stopPropagation();
     try {
-      let res = await axios.post(`http://localhost:3000/api/cart/add`, {
+      let res = await axios.post(`https://ecom-web-jnzv.onrender.com/api/cart/add`, {
         productId: product._id,
         name: product.name,
         price: product.price,
@@ -65,7 +65,7 @@ const Card = ({ product, isEdit, isDelete,updateProducts }) => {
 
   return (
     <StyledCard onClick={handleShowInfo}>
-      <img src={`http://localhost:3000/uploads/${product.images[0]}`} alt="Product" className="cover" />
+      <img src={`https://ecom-web-jnzv.onrender.com/uploads/${product.images[0]}`} alt="Product" className="cover" />
       <h1 className="title">{product.name}</h1>
       <p className="desc">{product.description}</p>
       <p className="price">$ {product.price}</p>

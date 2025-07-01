@@ -23,7 +23,7 @@ const ProductInfo = () => {
     const handleCart = async (e) => {
       e.stopPropagation()
       try {
-        let res = await axios.post(`http://localhost:3000/api/cart/add`, {
+        let res = await axios.post(`https://ecom-web-jnzv.onrender.com/api/cart/add`, {
           productId: product._id,
           name: product.name,
           price: product.price,
@@ -49,13 +49,13 @@ const ProductInfo = () => {
         <h2>{product.name}</h2>
         {product.images.length === 1 ? (
           <ImageWrapper>
-            <img src={`http://localhost:3000/uploads/${product.images[0]}`} alt={`Product`} />
+            <img src={`https://ecom-web-jnzv.onrender.com/uploads/${product.images[0]}`} alt={`Product`} />
           </ImageWrapper>
         ) : (
           <Slider {...settings}>
             {[...new Set(product.images)].map((img, index) => (
               <ImageWrapper key={index}>
-                <img src={`http://localhost:3000/uploads/${img}`} alt={`Product ${index + 1}`} />
+                <img src={`https://ecom-web-jnzv.onrender.com/uploads/${img}`} alt={`Product ${index + 1}`} />
               </ImageWrapper>
             ))}
           </Slider>

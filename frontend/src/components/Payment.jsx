@@ -13,7 +13,7 @@ const Payment = () => {
   const handlePayment = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/pay/checkout",
+        "https://ecom-web-jnzv.onrender.com/api/pay/checkout",
         { total: orderData.total },
         {
           headers: {
@@ -93,7 +93,7 @@ const Payment = () => {
                 <ProductItem key={index}>
                   <img
                     className="image"
-                    src={`http://localhost:3000/uploads/${item.imageUrl}`}
+                    src={`https://ecom-web-jnzv.onrender.com/uploads/${item.imageUrl}`}
                     alt={item.name}
                   />{" "}
                   {item.name} - ${item.price}

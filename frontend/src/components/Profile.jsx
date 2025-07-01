@@ -10,7 +10,7 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       const token = sessionStorage.getItem("token");
-      const response = await axios.get('http://localhost:3000/api/auth', {
+      const response = await axios.get('https://ecom-web-jnzv.onrender.com/api/auth', {
         headers: { Authorization: "Bearer " + token },
       });
       setUser(response.data.user);
@@ -42,7 +42,7 @@ const Profile = () => {
       <ProfileWrapper>
       <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
       <ProfileContainer>
-        <ProfileImage src={`http://localhost:3000/uploads/${user.avatar.url}`} alt={user.name} />
+        <ProfileImage src={`https://ecom-web-jnzv.onrender.com/uploads/${user.avatar.url}`} alt={user.name} />
         <ProfileDetails>
           <h2>{user.name}</h2>
           <p><strong>Email:</strong> {user.email}</p>
