@@ -13,7 +13,7 @@ const SelectAddress = () => {
   console.log("CArt",cart)
   const getAddresses = async () => {
     try {
-      let res = await axios.get('http://localhost:3000/api/auth/addresses', {
+      let res = await axios.get('https://ecom-web-jnzv.onrender.com/api/auth/addresses', {
         headers: { Authorization: "Bearer " + sessionStorage.getItem("token") }
       });
       setAddresses(res.data.addresses);
@@ -40,7 +40,7 @@ const SelectAddress = () => {
       console.log("products", cart.products)
       const token = sessionStorage.getItem("token");
       const orderResponse = await axios.post(
-        'http://localhost:3000/api/order/place',
+        'https://ecom-web-jnzv.onrender.com/api/order/place',
         { products: cart.products, total:cart.total, address: selectedAddress },
         { headers: { Authorization: "Bearer " + token } }
       );  

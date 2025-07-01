@@ -13,7 +13,7 @@ const Cart = () => {
 
   const fetchCart = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/cart', {
+      const res = await axios.get('https://ecom-web-jnzv.onrender.com/api/cart', {
         headers: { Authorization: "Bearer " + token }
       });
       console.log(res.data);

@@ -56,7 +56,7 @@ const Order = () => {
           <ProductList>
             {products.length > 0 ? (
               products.map((item, index) => (
-                <ProductItem key={index}><img className='image' src={`http://localhost:3000/uploads/${item.imageUrl}`} alt={item.name}  /> {item.name} - ${item.price}</ProductItem>
+                <ProductItem key={index}><img className='image' src={`https://ecom-web-jnzv.onrender.com/uploads/${item.imageUrl}`} alt={item.name}  /> {item.name} - ${item.price}</ProductItem>
               ))
             ) : (
               <Message>No products found in this order.</Message>
