@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Hamburger onClick={toggleMenu}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </Hamburger>
-                <Link to={'/'} className='logo'> <h1>Electroop</h1> </Link>
+                <Link to={'/'} className='logo'> <h1>Ecom_web</h1> </Link>
             </div>
             <Links className={isOpen ? 'open' : ''}>
                 <Link to={'/'}> <p>Home</p> </Link>
