@@ -16,11 +16,15 @@ import Payment from './components/Payment'
 import axios from 'axios'
 import MyOrders from './components/MyOrders'
 
-
-
-
 const App = () => {
   const [cartItems, setCartItems] = useState([])
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    }
+  }, []);
   
   return (
     <BrowserRouter>
