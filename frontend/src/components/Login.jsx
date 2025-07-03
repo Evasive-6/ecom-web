@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 
-
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,9 +13,11 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('http://localhost:3000/api/auth/login', {email, password});
+            const res = await axios.post('https://ecom-web-jnzv.onrender.com/api/auth/login', {email, password});
             console.log(res.data.user);
-            sessionStorage.setItem("token", res.data.token)
+            sessionStorage.setItem("token", res.data.token);
+            // Set axios default Authorization header
+            axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.token}`;
             alert('User Login successfully!');
             navigate('/')
         } catch (error) {
