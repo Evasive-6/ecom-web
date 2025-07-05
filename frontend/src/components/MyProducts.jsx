@@ -12,7 +12,7 @@ const MyProducts = () => {
     try {
       console.log("Using token:", token);
 
-      let res = await axios.get(`http://localhost:3000/api/products/my-products`, {
+      let res = await axios.get(`https://ecom-web-jnzv.onrender.com/api/products/my-products`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

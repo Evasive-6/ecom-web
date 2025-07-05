@@ -9,7 +9,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      let res = await axios.get("http://localhost:3000/api/order", {
+      let res = await axios.get("https://ecom-web-jnzv.onrender.com/api/order", {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token"),
         },
@@ -23,7 +23,7 @@ const MyOrders = () => {
 
   const cancelOrder = async (id) => {
     try {
-      let res = await axios.get(`http://localhost:3000/api/order/cancel/${id}`, {
+      let res = await axios.get(`https://ecom-web-jnzv.onrender.com/api/order/cancel/${id}`, {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token"),
         },
@@ -63,7 +63,7 @@ const MyOrders = () => {
               {order.products ? (
                 order.products.map((product) => (
                   <ProductItem key={product._id}>
-                    <img src={`http://localhost:3000/uploads/${product.imageUrl}`} alt="" />
+                    <img src={`https://ecom-web-jnzv.onrender.com/uploads/${product.imageUrl}`} alt="" />
                     {product.name} - ${product.price} x {product.quantity}
                   </ProductItem>
                 ))
