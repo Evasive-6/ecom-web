@@ -9,7 +9,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      let res = await axios.get("https://ecom-web-jnzv.onrender.com/api/order", {
+      let res = await axios.get("/api/order", {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token"),
         },
@@ -23,7 +23,7 @@ const MyOrders = () => {
 
   const cancelOrder = async (id) => {
     try {
-      let res = await axios.get(`https://ecom-web-jnzv.onrender.com/api/order/cancel/${id}`, {
+      let res = await axios.get(`/api/order/cancel/${id}`, {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token"),
         },

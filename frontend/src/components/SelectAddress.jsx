@@ -40,7 +40,7 @@ const SelectAddress = () => {
       console.log("products", cart.products)
       const token = sessionStorage.getItem("token");
       const orderResponse = await axios.post(
-        'https://ecom-web-jnzv.onrender.com/api/order/place',
+        '/api/order/place',
         { products: cart.products, total:cart.total, address: selectedAddress },
         { headers: { Authorization: "Bearer " + token } }
       );  
