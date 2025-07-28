@@ -90,15 +90,20 @@ export default MyOrders;
 export const OrdersContainer = styled.div`
   max-width: 800px;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #00d084, #00a86b);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const OrderCard = styled.div`
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #1e1e2f;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 208, 132, 0.6);
+  color: #e0f7f1;
+  border: 1px solid #00a86b;
 `;
 
 export const ProductList = styled.ul`
@@ -107,29 +112,38 @@ export const ProductList = styled.ul`
 `;
 
 export const ProductItem = styled.li`
-  background: #f8f8f8;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+  background: #2a2a3d;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 20px;
+  color: #e0f7f1;
+  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+
   img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #00d084;
   }
 `;
 const DeleteButton = styled.button`
-  background: #e74c3c;
+  background: #ff6f61;
   color: #fff;
   border: none;
-  padding: 10px 16px;
-  border-radius: 4px;
+  padding: 12px 20px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 111, 97, 0.6);
+
   &:hover {
-    background: #c0392b;
+    background: #ff3b2e;
+    box-shadow: 0 8px 20px rgba(255, 59, 46, 0.8);
   }
 `;

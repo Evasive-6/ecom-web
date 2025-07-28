@@ -75,53 +75,62 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #00d084, #00a86b);
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  padding: 20px;
+  padding: 40px 20px;
 `;
 
 const Card = styled.div`
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #1e1e2f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 208, 132, 0.6);
   width: 100%;
   max-width: 600px;
   margin-top: 5vh;
+  color: #e0f7f1;
+  border: 1px solid #00a86b;
 `;
 
 const Button = styled.button`
-  background-color: var(--primary-color);
-  color: var(--font-color);
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
+  background-color: #00d084;
+  color: #1e1e2f;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 12px;
   cursor: pointer;
   margin: 20px 0;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(0, 208, 132, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
   &:hover {
-    background-color: #06c44c; 
+    background-color: #00a86b;
+    box-shadow: 0 8px 20px rgba(0, 168, 107, 0.8);
   }
 `;
 
 const Header = styled.h2`
-  color: var(--primary-color, #2ecc71);
+  color: #00d084;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 0 0 10px #00d084;
 `;
 
 const Info = styled.p`
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.1rem;
+  color: #a0a0a0;
   margin: 5px 0;
 `;
 
 const SectionTitle = styled.h3`
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #333;
+  color: #e0f7f1;
+  font-weight: 700;
+  text-shadow: 0 0 8px #00d084;
 `;
 
 const ProductList = styled.ul`
@@ -130,25 +139,29 @@ const ProductList = styled.ul`
 `;
 
 const ProductItem = styled.li`
-  background: #f9f9f9;
+  background: #2a2a3d;
   margin: 5px 0;
-  padding: 10px;
-  border-radius: 6px;
-  color: #333;
+  padding: 15px;
+  border-radius: 12px;
+  color: #e0f7f1;
   display: flex;
   align-items: center;
   gap: 20px;
   width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+
   .image{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #00d084;
   }
 `;
 
 const Message = styled.p`
   font-size: 1.2rem;
-  color: #555;
+  color: #a0a0a0;
   margin-top: 20px;
 `;
 
