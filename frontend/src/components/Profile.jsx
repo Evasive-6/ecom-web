@@ -85,48 +85,52 @@ const ProfileWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #00d084, #00a86b);
   font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
 `;
 
 const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  padding: 30px;
-  background-color: white;
+  padding: 40px;
+  background: #1e1e2f;
   width: 60%;
   max-width: 800px;
-  height: 100vh;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 208, 132, 0.6);
+  color: #e0f7f1;
+  border: 1px solid #00a86b;
 `;
 
 const ProfileImage = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 5px;
-  border: 1px solid black;
+  border: 2px solid #00d084;
+  box-shadow: 0 0 15px #00d084;
 `;
 
 const LogoutButton = styled.button`
-  background-color: #fc3b3b;
-  border-radius: 6px;
+  background-color: #ff6f61;
+  border-radius: 8px;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 14px 24px;
   position: absolute;
   right: 50px;
   top: 100px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 111, 97, 0.6);
+
   &:hover {
-    background-color: #f41c1c;
+    background-color: #ff3b2e;
+    box-shadow: 0 8px 20px rgba(255, 59, 46, 0.8);
   }
 `;
 
@@ -136,27 +140,32 @@ const ProfileDetails = styled.div`
   padding: 10px;
 
   h2 {
-    font-size: 1.8rem;
-    /* text-align: center; */
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 10px #00d084;
   }
   p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 12px;
   }
   .primary-btn{
-    background-color: var(--primary-color);
-    color: var(--font-color);
-    border: 1px solid black;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 5px;
+    background-color: #00d084;
+    color: #1e1e2f;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 12px;
     cursor: pointer;
     margin: 20px 0;
-    transition: background-color 0.3s ease;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(0, 208, 132, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
     &:hover {
-      background-color: #06c44c; 
+      background-color: #00a86b;
+      box-shadow: 0 8px 20px rgba(0, 168, 107, 0.8);
     }
   }
 `;
@@ -167,7 +176,7 @@ const LoadingContainer = styled.div`
   justify-content: center;
   height: 100vh;
   font-size: 1.5rem;
-  color: #555;
+  color: #a0a0a0;
 `;
 
 export default Profile;
