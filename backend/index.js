@@ -12,7 +12,10 @@ const cors = require('cors')
 const authMiddleware = require('./middlewares/auth')
 
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin: ['https://ecomalbin.netlify.app', 'http://localhost:3000'],
+    credentials: true
+}));
 app.use('/api/auth', userRouter)
 app.use('/api/products',authMiddleware, productRouter)
 app.use('/api/cart', authMiddleware, cartRouter)
