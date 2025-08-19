@@ -13,7 +13,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post('/api/auth/login', {email, password});
+            const res = await axios.post('/api/user/login', {email, password});
             console.log(res.data.user);
             sessionStorage.setItem("token", res.data.token);
             // Set axios default Authorization header
